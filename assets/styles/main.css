@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    box-sizing: border-box;
+    border:0;
+    font-family:'Montserrat',sans-serif;
+    text-decoration: none;
+}
+html,body{height:100%;display: inline-table;width: 100%;background:url("../components/noise-bg.png") repeat center center;}
+
+main{
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+   }
+
+   main:after,
+   main:before{
+       content:'';
+       position:absolute;
+       display:table;
+       height:100%;
+       width:35%;
+    }
+    main:after{
+        background:url("../components/circle-detail.svg") no-repeat top right;
+        background-size:100%;
+        top:0px;
+        right:0px;
+    }
+    main:before{
+        background:url("../components/circle-detail_inf.svg") no-repeat bottom left;
+        background-size:100%;
+        bottom:0px;
+        left:0px;
+    }
+    main > div{z-index:2;padding:50px 30px;}
+    
+    .header-page{display:flex;justify-content: center;}
+    .header-page a{
+        width: 275px;
+        height: 120px;
+        display:block;
+        background:url("../components/logo-rn.svg") no-repeat center center;
+        background-size:100%;
+    }
+    .footer-page{display:flex;justify-content: center;}
+    .footer-page span{font-size:15px;color:#666;}
+
+    .group-link{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+        .group-link li{
+            margin:0 5px;
+            padding:1px;
+            border-radius:8px;
+            display:flex;
+            background: linear-gradient(to right, #8e44ad, #00C853);
+
+            transition-duration:0.2s;
+            -webkit-transition-duration:0.2s;
+            -moz-transition-duration:0.2s;
+        }
+        .group-link li:hover{
+            background: linear-gradient(to right, #00C853, #8e44ad);
+        }
+        .group-link a{
+            font-size:17px;
+            color:#fff;
+            padding:14px 20px;
+            background:url("../components/noise-bg.png") repeat center center;
+            display:flex;
+            width:100%;
+            max-width:300px;
+            justify-content: center;
+            border-radius:8px;
+            line-height:100%;
+            align-items: center;
+        }
+        .group-link a i{font-size:28px;}
+
+        @media screen and (max-width:580px){
+            .group-link{flex-direction:column;}
+            .group-link li{margin:5px 0px;}
+        }
