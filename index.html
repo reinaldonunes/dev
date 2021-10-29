@@ -26,10 +26,29 @@
             <footer class="footer-page">
                 <span>&copy; 2021 - Todos os direitos reservados</span>
             </footer>
+            <div id="ipuser"></div>
         </div>
     </main>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZKWZ3ZNMM"></script>
     <script src="assets/analytics/gtag.js"></script>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+  
+    <script>
+        /* Add "https://api.ipify.org?format=json" statement
+           this will communicate with the ipify servers in
+           order to retrieve the IP address $.getJSON will
+           load JSON-encoded data from the server using a
+           GET HTTP request */
+  
+        $.getJSON("https://api.ipify.org?format=json",
+                                          function(data) {
+  
+            // Setting text of element P with id gfg
+            $("#ipuser").html(data.ip);
+        })
+    </script>
 </body>
 </html>
