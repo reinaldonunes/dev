@@ -9,7 +9,7 @@
     font-family:'Montserrat',sans-serif;
     text-decoration: none;
 }
-html,body{height:100%;display: inline-table;width: 100%;background:url("../components/noise-bg.png") repeat center center;}
+html,body{height:100%;display:block;width: 100%;background:url("../components/noise-bg.png") repeat center center;}
 
 main{
     height:100%;
